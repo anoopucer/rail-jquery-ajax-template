@@ -1,4 +1,6 @@
-== Template for using JQuery and Rails for AJAX transactions
+== Template for using JQuery and Rails for AJAX transactions   
+
+An example template for updating a page using AJAX with Rails 3 and JQuery 1.4.1.
 
 == Author
 
