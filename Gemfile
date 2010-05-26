@@ -2,7 +2,7 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", "3.0.0.beta"
+gem "rails", "3.0.0.beta3"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"
@@ -20,4 +20,4 @@ gem "mysql"
 # group :test do
 #   gem "webrat"
 # end
-gem 'rspec-rails', '>=2.0.0.a5', :group => :test
+#gem 'rspec-rails', '>=2.0.0.a5', :group => :test

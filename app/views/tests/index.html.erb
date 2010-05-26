@@ -1,18 +1,31 @@
-<h1>Test central</h1>
+<h1>Examples of using Jquery to send AJAX messages to Rails3</h1>
 
-<p>lets do some testing</p>
+<p>Receiving and displaying text using different techniques</p>
 
-<form>
+<p>
+  <form id="get-messages" name="get-messages">
 	<button id="get-html">Get HTML</button>  
  	<button id="get-xml">Get XML</button>  
 	<button id="get-json">Get JSON</button>  
 	<button id="get-script">Get Script</button>
 	<button id="clear-all">Clear All</button>  	
-</form>
-
-<br />
+  </form> 
+</p> 
 
 <div id="html-here"></div>
 <div id="xml-here"></div>
 <div id="json-here"></div>
-<div id="script-here"></div>                                  
+<div id="script-here"></div>
+
+<br />  
+
+<p>Update a text message record using Jquery and JSON</p>
+         
+<p>
+  <form id="put-message" name="put-message">
+    <input type="text" id="text-message">
+    <button name="submit" type="submit">Send</button>
+  </form>  
+</p>
+
+<div id="message-here"></div>                               

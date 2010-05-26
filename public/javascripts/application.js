@@ -19,15 +19,40 @@ $('#get-json').click(function() {
 	});
 });     
 // Script
-$('#get-script').click(function() {
+$('#get-script').click(function() {                           
 	$.ajax({
 	  url: "/tests/grab_script",
 	  type: "GET",
 	  dataType: "script"
 	});  
 });    
-// Clear out all text
+// Clear out all text    
 $('#clear-all').click(function() {
 	$('div').empty();
 });
-$("form").submit(function () { return false; }); // so it won't submit
+$("form#get-messages").submit(function () { return false; }); // so it won't submit  
+// Update text record
+$("form#put-message").submit(function () {
+	var text = $('input#text-message').val();
+	
+	$.ajax({
+		url: "/tests/put_message", 
+		type: "PUT",
+		dataType: "json",
+		contentType: "application/json; charset=utf-8",
+		success: function() { 
+			$.getJSON('/tests/grab_message', function(json) {
+		    $('#message-here').html('<p>'+json.info+'</p>');
+			});
+		},    
+		error: function() { 
+			$('#message-here').html('<p class="error">Error getting message</p>'); 
+		},
+		data: JSON.stringify({ _method: "PUT", "message":{"title":"TEXT", "info":text }})
+	}); 
+	
+	return false;
+});      
+
+          
+                                                  

@@ -34,6 +34,27 @@ class TestsController < ApplicationController
     respond_to do |format|
       format.js   
     end
+  end   
+  
+  def grab_message
+    @test = Test.find_by_title('TEXT') 
+    
+    respond_to do |format|
+      format.json { render :json => @test } 
+    end 
+  end    
+  
+  def put_message
+    @test = Test.find_by_title('TEXT') 
+    
+    respond_to do |format|
+      if @test.update_attributes(params[:message])
+        format.json { render :json => "success".to_json, :status => :accepted } 
+      else
+        format.json { render :json => "error".to_json, :status => :not_acceptable }
+      end
+    end
+    
   end
 
 end

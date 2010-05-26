@@ -1,6 +1,24 @@
-== Template for using JQuery and Rails for AJAX transactions   
+== Template for using JQuery and Rails3 for AJAX transactions   
 
-An example template for updating a page using AJAX with Rails 3 and JQuery 1.4.1.
+I wanted to try out various interactions between JQuery 1.4 and Rails 3.0 to see how I could pass various types of data to and from the server. 
+
+Installation:
+
+grab it from github 
+
+git clone git@github.com:triendeau/rail-jquery-ajax-template.git
+
+then run
+
+'rake db:migrate' and 'rake db:seed'
+
+then you should be able to run 'bundle install' & 'rails server'
+
+Suggestions are welcome
+
+Enjoy    
+
+
 
 == Author
 
